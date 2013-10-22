@@ -1,12 +1,6 @@
 
 require 'spec_helper'
 
-def create_product(some_name)
-  Product.create({:name => some_name})
-end
-
-
-
 describe 'Static pages' do
     describe 'Home Page' do
      it "should have the content 'Welcome to my app!'" do
@@ -23,21 +17,6 @@ describe 'Static pages' do
     end
 end
 
-describe 'the products section' do
-  before(:all) do
-    create_product 'Some Jewellery'
-  end
-
-  describe '/pages/:id' do
-    it 'has its own page' do
-      visit '/pages'
-      click_link 'Some Jewellery'
-
-      expect(page).to have_css 'h3', text: 'Some Jewellery'
-    end
-  end
-
-  end 
 
 #   before(:all) do
 #     create_quiz 'Some quiz'

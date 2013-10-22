@@ -5,13 +5,12 @@ class ProductsController < ApplicationController
   	@products = Product.all
   end
 
-  def about
-  end 
+ 
 
-  #  def show
-  #   @product = Product.find(params[:id])
-  #   # redirect_to '/'
-  # end
+   def show
+    @product = Product.find(params[:id])
+    # redirect_to '/'
+  end
 
 
 
