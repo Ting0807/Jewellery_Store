@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-decribe 'the cart' do
-  let(:jewellery {FactoryGirl.create(:product) }	
+describe 'the cart' do
+  let(:jewellery){FactoryGirl.create(:product) }	
 
   it 'should initially be empty' do
   	visit product_path(jewellery)
