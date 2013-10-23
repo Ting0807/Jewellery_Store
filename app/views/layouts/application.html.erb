@@ -62,9 +62,9 @@
       <% end %>
       <div class="row">
         <div class="col-lg-12">
-         <div class='item_count'>
-  <%= pluralize current_cart.count, 'item' %>
-</div>
+          <div class='item_count'>
+            <%= link_to pluralize(current_cart.count, 'item'), current_cart, id: 'cart-count' %>
+          </div>
           <%= yield %> 
         </div>
        
@@ -79,3 +79,8 @@
 
   </body>
 </html>
+
+
+
+
+
