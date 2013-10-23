@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-def create_product(some_name)
-  Product.create({:name => some_name})
+def create_product
+  FactoryGirl.create(:product)
 end
 
 
 describe 'the products section' do
   before(:all) do
-    create_product 'Some Jewellery'
+    create_product
   end
 
   describe '/products/:id' do

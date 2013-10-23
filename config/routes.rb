@@ -3,6 +3,7 @@ Tingjewellery::Application.routes.draw do
   get "pages/index"
   resources :pages
   resources :products
+  resources :carts
   root :to => "pages#index"
   get "about" => "pages#about"
 

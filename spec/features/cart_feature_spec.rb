@@ -5,11 +5,12 @@ describe 'the cart' do
 
   it 'should initially be empty' do
   	visit product_path(jewellery)
-  	expect(page).to have_css 'item_count', text: '0 items'
+  	expect(page).to have_css '.item_count', text: '0 items'
   end
 
   it 'can have items added to it' do
     visit product_path(jewellery)
+  	expect(page).to have_css 'h3', text: 'Some Jewellery'
     click_button 'Add to Cart'
 
     expect(page).to have_css '.item_count', text: '1 item'
