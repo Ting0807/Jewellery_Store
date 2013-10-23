@@ -35,12 +35,12 @@ gem 'twitter-bootstrap-rails',
 
 gem 'devise', '~> 3.1.1'
 gem 'paperclip', '~> 3.0'
+gem 'stripe', '~>1.8.8'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'

@@ -19,4 +19,19 @@ describe 'the products section' do
     end
   end
 
+  describe '/products/new' do
+    
+    it 'creates a new prouct' do
+      visit '/products/new'
+
+      within '.new_product' do
+        fill_in 'name', with: 'new Jewellery'
+        click_button "Create Product"
+      end
+
+      expect(current_url).to eq url_for(Product.last)
+      expect(page).to have_content 'new jewellery'
+    end
+  end 
+
 end 
