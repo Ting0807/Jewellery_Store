@@ -16,10 +16,12 @@ describe 'the cart' do
     expect(page).to have_css '.item_count', text: '1 item'
     expect(page).to_not have_css '.item_count', text: '1 items'
   end
-
-  it'has its own page'do
-      visit '/'
-      click_link 'cart-count'
-      expect(page).to have_css 'h3', text: 'Your Cart'
+  
+  describe '/carts/:id' do
+    it'has its own page'do
+        visit '/'
+        click_link 'cart-count'
+        expect(page).to have_css 'h3', text: 'Your Cart'
+    end
   end
 end

@@ -25,12 +25,13 @@ describe 'the products section' do
       visit '/products/new'
 
       within '.new_product' do
-        fill_in 'name', with: 'new Jewellery'
-        click_button "Create Product"
+        fill_in 'product_name', with: 'new Jewellery'
+        click_button "Create product"
       end
 
+
       expect(current_url).to eq url_for(Product.last)
-      expect(page).to have_content 'new jewellery'
+      expect(page).to have_content 'new Jewellery'
     end
   end 
 

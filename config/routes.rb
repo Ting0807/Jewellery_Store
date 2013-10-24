@@ -6,6 +6,7 @@ Tingjewellery::Application.routes.draw do
   resources :carts
   root :to => "pages#index"
   get "about" => "pages#about"
+  resources :charges
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

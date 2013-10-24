@@ -5,13 +5,21 @@ class ProductsController < ApplicationController
   	@products = Product.all
   end
 
- 
+  def new
+  	@product =  Product.new
+  end 
 
    def show
     @product = Product.find(params[:id])
     # redirect_to '/'
   end
 
+
+  def create
+  	@product = Product.create(params[:product].permit(:name, :image))
+
+  	redirect_to @product
+  end 
 
 
 
