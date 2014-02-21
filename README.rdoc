@@ -1,28 +1,19 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TMakers Academy - Week 10 Task: E-Commerce
 
-Things you may want to cover:
+Project: Create an ecommerce app in Rails.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Functionality:
 
 
-Please feel free to use a different markup language if you do not plan to run
+
+Using API:
+Devise
+Paperclip
+Stripe
+
+Applying Bootstrap
+
+
 <tt>rake doc:app</tt>.
